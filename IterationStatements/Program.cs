@@ -27,7 +27,97 @@
         //Call the methods to test them in the Main method below
         static void Main(string[] args)
         {
-            
+            PrintPosToNeg();
+            CountByThree();
+            CheckEquality(8,8);
+            PositiveOrNegative(-5);
+            CanVote();
+            InTenRange();
+            MultiTable(3);
+        }
+
+        public static void PrintPosToNeg()
+        {
+            for(int i = 1000; i >= -1000; i--)
+            {
+                Console.Write($"{i} ");
+            }
+        }
+
+        public static void CountByThree()
+        {
+            int i = 3;
+            while(i <= 999)
+            {
+                Console.Write($"{i} ");
+                i+=3;
+            }
+        }
+
+        public static void CheckEquality(int num1, int num2)
+        {
+            if(num1 == num2)
+            {
+                Console.WriteLine($"{num1} and {num2} are equal.");
+            }
+            else
+            {
+                Console.WriteLine($"{num1} and {num2} are not equal.");
+            }
+        }
+
+        public static void PositiveOrNegative(int num)
+        {
+            if(num > 0)
+            {
+                Console.WriteLine($"{num} is a positive number.");
+            }
+            else if(num < 0)
+            {
+                Console.WriteLine($"{num} is a negative number.");
+            }
+            else
+            {
+                Console.WriteLine($"{num} is neither negative or positive.");
+            }
+        }
+
+        public static void CanVote()
+        {
+            Console.WriteLine("What is the candadite's age?");
+            int age = int.Parse(Console.ReadLine());
+
+            if(age >=18)
+            {
+                Console.WriteLine("This person can vote.");
+            }
+            else
+            {
+                Console.WriteLine("This person cannot vote.");
+            }
+        }
+
+        public static void InTenRange()
+        {
+            Console.WriteLine("Give us a number");
+            int userInput = int.Parse(Console.ReadLine());
+
+            if(userInput <= 10 && userInput >= -10)
+            {
+                Console.WriteLine($"{userInput} falls within the range of -10 to 10");
+            }
+            else
+            {
+                Console.WriteLine($"{userInput} does not falls within the range of -10 to 10");
+            }
+        }
+
+        public static void MultiTable(int num)
+        {
+            for(int i = 1; i <=12; i++)
+            {
+                Console.WriteLine($"{i}\t{num*i}");
+            }
         }
     }
 }
